@@ -11,11 +11,9 @@ X<!DOCTYPE html>
 	{% else %}
 		<p>Welcome!</p>
 	{% endif %}
-	{% for stud in movie %}
+
 	{% for fil in film%}
-	<p>First Name: {{ stud.first_name}}</p>
-	<p>Last Name: {{ stud.last_name}}</p>
-	<p>middle Name: {{ stud.middle_name}}</p>
+	
 	<p>Titile: {{ fil.title}}</p>
 	<p>Year: {{ fil.Year}}</p>
 	
@@ -24,5 +22,5 @@ X<!DOCTYPE html>
 </p>----------------------------------------------------------------------------------------------------</p>
 	
 	{% endfor %}	
-	{% endfor %}
+
 </body>
