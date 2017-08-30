@@ -1,0 +1,22 @@
+ <!DOCTYPE html> 
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+	<h1 style="text-align: center;">List</h1>
+
+	{% if request.user.is_authenticated %}
+	<h1>Hi {{request.user.username|title}}</h1>
+	{% else %}
+		<p>Welcome!</p>
+	{% endif %}
+	{% for fil in genres%}
+
+	<p>Titile: {{ fil.Type }}</p>
+	<p>Year: {{ fil.Description}}</p>
+		{% endfor %}
+
+	
+	
+	

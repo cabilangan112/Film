@@ -1,26 +1,21 @@
-X<!DOCTYPE html> 
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
 	<h1>hellow</h1>
 
-	{% if request.user.is_authenticated %}
-	<h1>Hi {{request.user.username|title}}</h1>
-	{% else %}
-		<p>Welcome!</p>
-	{% endif %}
 
 	{% for fil in film%}
-	
+
 	<p>Titile: {{ fil.title}}</p>
 	<p>Year: {{ fil.Year}}</p>
+	{% for movie in movie%}
+	<p>Actor: {{ movie.first_name}} {{ movie.last_name}}</p>
 	
 
 
 </p>----------------------------------------------------------------------------------------------------</p>
 	
 	{% endfor %}	
-
+	{% endfor %}
+	{% endblock %}
 </body>

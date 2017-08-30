@@ -26,7 +26,7 @@ class Films(models.Model):
 		
 	def save(self, *args,**kwargs):
 		super(Films,self).save(*args,**kwargs)
-		xxcxxcxcxcxcxcxcxcxcxcx
+
 	def __str__(self):
 		return self.title
 

@@ -1,17 +1,28 @@
-X<!DOCTYPE html> 
+<!DOCTYPE html> 
 <html>
 <head>
 <title>Page Title</title>
 </head>
 <body>
-	<h1 style="text-align: center;">List</h1>
+	<h1>hellow</h1>
+	
 
-     
-<h1>{{ object.headline }}</h1>
-<p>{{ object.content }}</p>
-<p>Last Name: {{ object.title}}</p>
-<p>First Name: {{ object.Year}}</p>
+	{% if request.user.is_authenticated %}
+	<h1>Hi {{request.user.username|title}}</h1>
+	{% else %}
+		<p>Welcome!</p>
+	{% endif %}
 
 
 
+	<p>Titile: {{ object.title}}</p>
+	<p>Year: {{ object.Year}}</p>
+	{% for movie in movie%}
+	<p>Actor: {{ movie.first_name}} {{ movie.last_name}}</p>
+	
+
+
+</p>----------------------------------------------------------------------------------------------------</p>
+	
+	{% endfor %}
 </body>

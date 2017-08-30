@@ -1,4 +1,4 @@
-X<!DOCTYPE html> 
+<!DOCTYPE html> 
 <html>
 <head>
 <title>Page Title</title>
@@ -6,6 +6,7 @@ X<!DOCTYPE html>
 <body>
 	<h1>hellow</h1>
 
+	
 	{% if request.user.is_authenticated %}
 	<h1>Hi {{request.user.username|title}}</h1>
 	{% else %}
@@ -16,12 +17,14 @@ X<!DOCTYPE html>
 	<h1 style="text-align: center;">Actor</h1>
 
 	{% for stud in movie %}
-	<p>First Name: {{ stud.first_name}}</p>
-	<p>Last Name: {{ stud.last_name}}</p>
-	<p>middle Name: {{ stud.middle_name}}</p>
+	<p>Actor Name: <a href="\film\">{{ stud.first_name}} {{ stud.last_name}} {{ stud.middle_name}} </a></p>
 
+
+	 
 </p>----------------------------------------------------------------------------------------------------</p>
 	
 	{% endfor %}
 	
+
+	<a href="\genres\" \><li>Genre</li></h1></a>
 </body>
